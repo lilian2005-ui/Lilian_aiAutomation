@@ -57,9 +57,9 @@ The projects demonstrate my progression from understanding real-world work to de
 | U3 | Quality Thinking | 2 Projects | ✅ |
 | U4 | Knowledge Grounding | 2 Projects | ⬜ |
 | U5 | Agent & Decision Thinking | 2 Projects | ✅ |
-| U6 | Integration Thinking | 2 Projects | ⬜ |
-| U7 | Reliability Thinking | 2 Projects | ⬜ |
-| U8 | Solution Engineering | 2 Projects | ⬜ |
+| U6 | Integration Thinking | 1 Project | ✅ |
+| U7 | Reliability Thinking | 1 Project | ⬜ |
+| U8 | Solution Engineering | 1 Project | ⬜ |
 
 ---
 
@@ -302,19 +302,22 @@ n8n · Telegram Bot API · OpenRouter (LLM) · Simple Memory · Himalayas Jobs A
 
 I learned how AI-powered systems communicate with external applications, services, APIs, and data sources.
 
-### Projects
+### Project
 
-#### 01 — [Course Project Name]
+#### 01 — PlanCraft AI: Build, Connect, Automate
 
 **Type:** Guided Project
 
-🔗 [View Project](./06-connect-it-to-the-world/course-project)
+**What it solves:**  
+Turns a raw project idea into a structured action plan. The user enters their project details in the app, which sends the request to an n8n workflow. An AI Agent generates a structured plan (project summary, main goal, phases, suggested actions, risks and mitigations, and an estimated timeline), which is saved to the database and displayed back in the interface.
 
-#### 02 — [Independent Project Name]
+**How the systems connect:**  
+Lovable (frontend) → Supabase (requests, plans, and processing status) → Webhook → n8n workflow → AI Agent with Structured Output Parser → results saved back to Supabase.
 
-**Type:** Independent Project
+**Tools:**  
+Lovable · Supabase · n8n Cloud · Google Gemini · Webhooks · JSON
 
-🔗 [View Project](./06-connect-it-to-the-world/independent-project)
+🌐 [Live Demo](https://plancraft-ai-planner.lovable.app) · 🔗 [View Project](./06-connect-it-to-the-world/course-project)
 
 ---
 
@@ -326,19 +329,13 @@ I learned how AI-powered systems communicate with external applications, service
 
 I learned how to design AI-powered systems that handle errors, unexpected inputs, failures, and operational risks.
 
-### Projects
+### Project
 
 #### 01 — [Course Project Name]
 
 **Type:** Guided Project
 
 🔗 [View Project](./07-make-it-reliable/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./07-make-it-reliable/independent-project)
 
 ---
 
@@ -350,19 +347,13 @@ I learned how to design AI-powered systems that handle errors, unexpected inputs
 
 I learned how to choose the right solution for a real-world problem by considering the problem, users, constraints, AI capabilities, automation, reliability, and impact.
 
-### Projects
+### Project
 
 #### 01 — [Course Project Name]
 
 **Type:** Guided Project
 
 🔗 [View Project](./08-engineer-the-right-solution/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./08-engineer-the-right-solution/independent-project)
 
 ---
 
