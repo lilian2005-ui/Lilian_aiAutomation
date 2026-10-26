@@ -8,9 +8,9 @@
 
 ## 👩‍💻 About Me
 
-Hi, I'm **[Your Name]**.
+Hi, I'm **Lilian Abu Ramadan**.
 
-I am a **[Your Professional Title]** interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
+I am an **AI Engineer** interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
 
 Through this portfolio, I document the systems and solutions I design and build throughout my AI Automation journey.
 
@@ -25,10 +25,10 @@ Through this portfolio, I document the systems and solutions I design and build 
 
 ### Connect With Me
 
-- 💼 LinkedIn: [Your LinkedIn]
+- 💼 LinkedIn: [linkedin.com/in/lilian-abu-ramadan](https://linkedin.com/in/lilian-abu-ramadan)
 - 🌐 Portfolio: [Your Portfolio]
-- 📧 Email: [Your Email]
-- 🐙 GitHub: [Your GitHub]
+- 📧 Email: lilian.aburamadan7@gmail.com
+- 🐙 GitHub: [github.com/lilian2005-ui](https://github.com/lilian2005-ui)
 
 ---
 
@@ -52,8 +52,8 @@ The projects demonstrate my progression from understanding real-world work to de
 
 | Unit | Capability | Projects | Status |
 |---|---|---|---|
-| U1 | Process & Data Thinking | 2 Projects | ⬜ |
-| U2 | AI-Powered Solution Building | 2 Projects | ⬜ |
+| U1 | Process & Data Thinking | 2 Projects | 🟨 1 of 2 |
+| U2 | AI-Powered Solution Building | 2 Projects | ✅ |
 | U3 | Quality Thinking | 2 Projects | ⬜ |
 | U4 | Knowledge Grounding | 2 Projects | ⬜ |
 | U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
@@ -124,9 +124,15 @@ I learned how to understand real-world work, decompose processes, identify input
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — AI Client Intake & Request Routing System
 
 **Type:** Guided Project
+
+**What it solves:**  
+Automates how a services company processes client requests: extracting key details, checking completeness, routing each request by clear rules, and sending incomplete or unclear cases to human review.
+
+**Tools:**  
+Google Forms · AI by Zapier · Zapier Paths · Google Sheets · Gmail
 
 🔗 [View Project](./01-process-and-data/course-project)
 
@@ -148,17 +154,29 @@ I learned how to transform a problem into a system and use AI-powered tools to d
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — SkillBridge Lite: AI-Powered Career Fit Assistant
 
 **Type:** Guided Project
 
-🔗 [View Project](./02-build-the-system/course-project)
+**What it solves:**  
+Helps students and early-career professionals understand how their skills, projects, and experience match a specific opportunity, with AI feedback on strengths, gaps, and next steps.
 
-#### 02 — [Independent Project Name]
+**Tools:**  
+Lovable · AI-powered analysis
+
+🔗 [View Repository](https://github.com/lilian2005-ui/SkillBridge-Lite) · 🌐 [Live Demo](https://pixel-perfect-playbook-530.lovable.app/)
+
+#### 02 — DataSense Lite: AI-Powered Data Insights for Business Owners
 
 **Type:** Independent Project
 
-🔗 [View Project](./02-build-the-system/independent-project)
+**What it solves:**  
+Lets business owners upload a CSV or Excel file and instantly get a clear dashboard of key numbers and charts, plus insights and recommendations on what to do next. Supports Arabic and English, and reads the file in the browser to keep data private.
+
+**Tools:**  
+Lovable · AI-powered analysis
+
+🔗 [View Repository](https://github.com/lilian2005-ui/datasense-lite) · 🌐 [Live Demo](https://pixel-perfect-dream-3901.lovable.app/)
 
 ---
 
@@ -432,8 +450,8 @@ The projects are presented as documented engineering work, including the problem
 
 ## 👩‍💻 Author
 
-**[Your Name]**
+**Lilian Abu Ramadan**
 
 AI Automation | AI-Powered Solutions | Human-Centered Innovation
 
-[LinkedIn] · [GitHub] · [Portfolio]
+[LinkedIn](https://linkedin.com/in/lilian-abu-ramadan) · [GitHub](https://github.com/lilian2005-ui)
