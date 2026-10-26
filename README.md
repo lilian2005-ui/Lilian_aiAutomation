@@ -58,7 +58,7 @@ The projects demonstrate my progression from understanding real-world work to de
 | U4 | Knowledge Grounding | 2 Projects | ⬜ |
 | U5 | Agent & Decision Thinking | 2 Projects | ✅ |
 | U6 | Integration Thinking | 1 Project | ✅ |
-| U7 | Reliability Thinking | 1 Project | ⬜ |
+| U7 | Reliability Thinking | 1 Project | ✅ |
 | U8 | Solution Engineering | 1 Project | ⬜ |
 
 ---
@@ -331,9 +331,18 @@ I learned how to design AI-powered systems that handle errors, unexpected inputs
 
 ### Project
 
-#### 01 — [Course Project Name]
+#### 01 — RAG System with n8n and Supabase Vector Store
 
 **Type:** Guided Project
+
+**What it solves:**  
+Rebuilds a Retrieval-Augmented Generation (RAG) system from scratch to understand what a ready-made platform like Dify hides. The system has two parts: a Knowledge Ingestion Pipeline that turns a PDF into searchable knowledge (text extraction, chunking, embeddings, and storage in a vector database), and a RAG AI Agent that uses the vector store as a tool to retrieve the relevant chunks and generate an answer grounded in them.
+
+**Concepts covered:**  
+Document ingestion · Text extraction · Chunking · Embeddings · Vector databases · Similarity search · Agent tools · Knowledge vs. Memory · Retrieval vs. Generation
+
+**Tools:**  
+n8n · Supabase Vector Store
 
 🔗 [View Project](./07-make-it-reliable/course-project)
 
