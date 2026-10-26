@@ -26,7 +26,7 @@ Through this portfolio, I document the systems and solutions I design and build 
 ### Connect With Me
 
 - 💼 LinkedIn: [linkedin.com/in/lilian-abu-ramadan](https://linkedin.com/in/lilian-abu-ramadan)
-- 🌐 Portfolio: [Your Portfolio]
+- 🌐 Portfolio: [portfolio-b9zt.vercel.app](https://portfolio-b9zt.vercel.app/)
 - 📧 Email: lilian.aburamadan7@gmail.com
 - 🐙 GitHub: [github.com/lilian2005-ui](https://github.com/lilian2005-ui)
 
@@ -54,9 +54,9 @@ The projects demonstrate my progression from understanding real-world work to de
 |---|---|---|---|
 | U1 | Process & Data Thinking | 2 Projects | 🟨 1 of 2 |
 | U2 | AI-Powered Solution Building | 2 Projects | ✅ |
-| U3 | Quality Thinking | 2 Projects | ⬜ |
+| U3 | Quality Thinking | 2 Projects | ✅ |
 | U4 | Knowledge Grounding | 2 Projects | ⬜ |
-| U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
+| U5 | Agent & Decision Thinking | 2 Projects | ✅ |
 | U6 | Integration Thinking | 2 Projects | ⬜ |
 | U7 | Reliability Thinking | 2 Projects | ⬜ |
 | U8 | Solution Engineering | 2 Projects | ⬜ |
@@ -190,17 +190,44 @@ I learned how to test AI-powered systems, identify failures, evaluate outputs, a
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — TaskBridge: Turn Unclear Requests into Clear, Actionable Plans
 
 **Type:** Guided Project
 
-🔗 [View Project](./03-prove-it-works/course-project)
+**What it solves:**  
+Helps freelancers, new graduates, and early-career professionals turn vague goals and work requests into organized plans with clear tasks, priorities, and status tracking (Goal → Plan → Tasks → Priorities → Status → Progress).
 
-#### 02 — [Independent Project Name]
+**Tools:**  
+Lovable · Supabase (authentication, database, and access control)
+
+**What I built:**  
+A responsive web application with authentication, persistent data storage, task management, progress tracking, and database-level access control.
+
+**Skills demonstrated:**  
+AI-assisted application building · Requirements analysis · System design · Relational database design · Authentication and access control · CRUD operations · Workflow design · Functional testing · Security-aware implementation
+
+🌐 [Live Demo](https://taskbridge-ai.lovable.app)
+
+#### 02 — ContentFlow AI: AI-Powered Social Content Generation
 
 **Type:** Independent Project
 
-🔗 [View Project](./03-prove-it-works/independent-project)
+**What it solves:**  
+Small businesses and freelancers often lack the time and design resources to keep several social channels active with content that looks and sounds like their brand. The user uploads a logo and describes the brand, and one brand profile produces four platform-specific posts (Instagram, Facebook, LinkedIn, and X) in a single run, in Arabic or English, each with a caption, hashtags, and a visual.
+
+**Key features:**  
+Automatic brand colors extracted from the logo · Platform-aware generation · Schema-validated AI output · Edit and single-post regeneration · Export to PDF, CSV, and JSON · Bilingual interface (English and Arabic with full RTL support)
+
+**My role:**  
+Logo color extraction, prompt engineering, the text and image generation pipeline, regeneration logic, and the AI/backend data contract.
+
+**Engineering highlights:**  
+Row Level Security on every table, with composite foreign keys so a record's owner always matches its parent's owner · Private storage with signed URLs · All AI calls run server-side, with no keys exposed to the client · Failures show clear states instead of fake content
+
+**Tools:**  
+Next.js · Supabase (Auth, PostgreSQL, Storage with RLS) · AI SDK · Tailwind CSS · v0
+
+🌐 [Live Demo](https://contentflow-ai-lac.vercel.app)
 
 ---
 
@@ -238,15 +265,30 @@ I learned when an Agent is appropriate, how AI can make decisions, and how to ke
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — XYZ Real Estate AI Agent
 
 **Type:** Guided Project
 
+**What it solves:**  
+Replaces manual client intake for a real estate company. An AI Agent chats with clients on Telegram, understands their property needs, collects the missing information step by step, shows a final summary for confirmation, and saves the data to Google Sheets only after the client explicitly approves.
+
+**Tools:**  
+n8n · Telegram · OpenRouter · Simple Memory · Google Sheets
+
 🔗 [View Project](./05-control-its-agency/course-project)
 
-#### 02 — [Independent Project Name]
+#### 02 — Recruiter Matching Agent
 
 **Type:** Independent Project
+
+**What it solves:**  
+Recruiters spend hours tracking new job postings and manually comparing CVs against each one. This Telegram AI agent fetches the latest remote jobs live, extracts the job requirements for the recruiter to confirm, and scores each candidate out of 100 using a fixed rubric (skills, experience, role relevance, education). It then decides the next step: shortlist, ask for clarification, hand off to a human, or stop.
+
+**Agent boundaries:**  
+Borderline scores (60 to 74) go to the recruiter and incomplete profiles are flagged as "Needs Review". Results are saved only after explicit confirmation. The agent never contacts candidates, never applies to jobs, never makes final hiring decisions, and ignores personal attributes such as age and gender.
+
+**Tools:**  
+n8n · Telegram Bot API · OpenRouter (LLM) · Simple Memory · Himalayas Jobs API · Google Sheets
 
 🔗 [View Project](./05-control-its-agency/independent-project)
 
@@ -454,4 +496,4 @@ The projects are presented as documented engineering work, including the problem
 
 AI Automation | AI-Powered Solutions | Human-Centered Innovation
 
-[LinkedIn](https://linkedin.com/in/lilian-abu-ramadan) · [GitHub](https://github.com/lilian2005-ui)
+[LinkedIn](https://linkedin.com/in/lilian-abu-ramadan) · [GitHub](https://github.com/lilian2005-ui) · [Portfolio](https://portfolio-b9zt.vercel.app/)
