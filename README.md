@@ -176,7 +176,7 @@ Lets business owners upload a CSV or Excel file and instantly get a clear dashbo
 **Tools:**  
 Lovable · AI-powered analysis
 
-🔗 [View Repository](https://github.com/lilian2005-ui/datasense-lite) · 🌐 [Live Demo](https://pixel-perfect-dream-3901.lovable.app/)
+🔗 [View Repository](https://github.com/lilian2005-ui/datasense-lite) · 🌐 [Live Demo]((https://datasense-lite.lovable.app/))
 
 ---
 
