@@ -60,7 +60,7 @@
 
 **Tools:** Lovable · AI Analysis
 
-[Explore the Project](./Independent-Project) · [Repository](https://github.com/lilian2005-ui/datasense-lite) · [Live Demo]((https://datasense-lite.lovable.app/))
+[Explore the Project](./Independent-Project) · [Repository](https://github.com/lilian2005-ui/datasense-lite) · [Live Demo](https://datasense-lite.lovable.app/)
 
 ---
 
