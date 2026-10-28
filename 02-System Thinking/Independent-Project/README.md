@@ -1,104 +1,108 @@
-# [Project Name]
+# DataSense Lite
 
-> [One-sentence description of what this project does.]
+تطبيق ويب (MVP تجريبي) لأصحاب المشاريع: يرفعون ملف بياناتهم (CSV أو Excel) فيحصلون على لوحة واضحة بأهم الأرقام والرسوم، مع Insights وRecommendations مبنية على بياناتهم.
 
 ---
 
 ## 🎯 Problem
 
 ### The Context
-
-[What is the real-world situation?]
+أصحاب المشاريع الصغيرة والمتوسطة يملكون بيانات (مبيعات، عملاء، مخزون...) في ملفات CSV أو Excel، لكن معظمهم ليسوا محللي بيانات، ولا يملكون الوقت أو الأدوات لتحويل هذه الملفات إلى فهم واضح.
 
 ### The Problem
-
-[What problem are you trying to solve?]
+الملف وحده لا يجيب عن سؤال "ماذا أفعل الآن؟". يحتاج صاحب المشروع إلى رؤية الأرقام المهمة والاتجاهات بوضوح، ثم إلى توصيات عملية مبنية على بياناته، وغالبًا لا يعرف من أين يبدأ.
 
 ### Why It Matters
-
-[Why is solving this problem useful?]
+تحويل البيانات إلى قرارات يساعد صاحب المشروع على اكتشاف ما يحتاج إلى انتباه واتخاذ خطوات عملية، بدل ترك البيانات في ملفات لا يستفيد منها.
 
 ---
 
 ## 💡 Solution
 
-[Explain your solution briefly.]
+تطبيق يقرأ ملف البيانات، ويعرض لوحة (Dashboard) بمؤشرات ورسوم مناسبة لهذه البيانات، ثم يولّد Insights وRecommendations مكتوبة بلغة بسيطة.
 
-What does the system do?
+**What does the system do?**
 
-1. ...
-2. ...
-3. ...
-4. ...
+1. يستقبل ملف CSV أو Excel يرفعه المستخدم.
+2. يقرأ الملف داخل المتصفح (Browser) حفاظًا على خصوصية البيانات.
+3. يعرض لوحة بأهم الأرقام (KPIs) والرسوم البيانية.
+4. يولّد Insights وRecommendations مبنية على البيانات، ويدعم العربية والإنجليزية.
 
 ---
 
 ## 👤 Users
 
-**Primary Users:**  
-[Who will use this solution?]
+**Primary Users:**
+أصحاب المشاريع (Business Owners)، وهم الفئة الأكثر حاجة لهذا النوع من التحليل.
 
-**User Need:**  
-[What do they need to accomplish?]
+**User Need:**
+فهم بياناتهم بسرعة ومعرفة الخطوة التالية، دون الحاجة إلى مهارات تحليل أو أدوات معقدة.
 
 ---
 
 ## 🧠 How I Designed the Solution
 
-[Briefly explain the main thinking/design decisions behind the solution.]
+طبّقت نفس تسلسل U2 الذي تعلمته في المشروع الموجّه: بدأت بتحديد المستخدم الأول (أصحاب المشاريع)، ثم عرّفت المشكلة والحل وحدود الـ MVP، وصممت الشاشات ومنطق البيانات ومهمة الـ AI، وكتبت ملفات المواصفات (من 01 إلى 05) قبل أن أوجّه Lovable للبناء عبر Prompts متتابعة.
+
+أهم قراراتي في التصميم:
+
+- قبول أي نوع من البيانات بدل تقييد التطبيق بمجال واحد.
+- الاكتفاء برفع CSV/Excel في الـ MVP.
+- دعم العربية والإنجليزية من البداية.
+- طلب تحليل حقيقي ورسوم واضحة وليس بيانات شكلية.
 
 ---
 
 ## ⚙️ How It Works
 
 ```text
-Input
-  ↓
-[Step]
-  ↓
-AI / Logic
-  ↓
-[Step]
-  ↓
-Output
+User uploads a CSV / Excel file
+              ↓
+File is read inside the browser
+              ↓
+Data is parsed and analyzed
+              ↓
+Dashboard: KPIs + Charts
+              ↓
+AI generates Insights + Recommendations
+              ↓
+User reviews results (Arabic / English)
 ```
 
 ---
 
 ## 🤖 Role of AI
 
-What does AI do in this solution?
+**What does AI do in this solution?**
 
-- ...
-- ...
-- ...
+- يقرأ ملخص البيانات المحللة ويستخرج منها Insights مفهومة.
+- يولّد Recommendations عملية مرتبطة ببيانات المستخدم.
+- يكتب النتائج بلغة بسيطة بالعربية أو الإنجليزية.
 
 ### What AI Should NOT Do
 
-- ...
-- ...
+- اختراع أرقام أو استنتاجات غير مدعومة بالبيانات المرفوعة.
+- تقديم التوصيات كقرارات نهائية؛ هي اقتراحات يراجعها صاحب المشروع.
 
 ---
 
 ## 🔄 Automation
 
-What parts of the process are automated?
+**What parts of the process are automated?**
 
-- ...
-- ...
-- ...
+- قراءة الملف وتحليل أعمدته.
+- حساب المؤشرات وبناء الرسوم البيانية.
+- توليد الـ Insights والـ Recommendations بعد الرفع.
 
 ---
 
 ## 🗂️ Data
 
 ### Input
-
-[What information enters the system?]
+ملف CSV أو Excel يرفعه المستخدم، ويمكن أن يحتوي أي نوع من البيانات.
 
 ### Output
-
-[What does the system produce?]
+لوحة بمؤشرات ورسوم بيانية، مع Insights وRecommendations بالعربية أو الإنجليزية.
 
 ---
 
@@ -106,59 +110,62 @@ What parts of the process are automated?
 
 | Tool | Purpose |
 |---|---|
-| [Tool] | [Purpose] |
-| [Tool] | [Purpose] |
-| [Tool] | [Purpose] |
+| Lovable | بناء التطبيق بمساعدة الذكاء الاصطناعي |
+| Google Gemini API | توليد الـ Insights والـ Recommendations |
+| GitHub | استضافة المشروع وتوثيقه |
 
 ---
 
 ## 🔑 Key Design Decisions
 
 ### Decision 1
+**Decision:**
+قراءة الملف داخل المتصفح بدل رفعه إلى خادم.
 
-**Decision:**  
-...
-
-**Why:**  
-...
+**Why:**
+بيانات الأعمال حساسة، وبقاؤها في المتصفح يحافظ على خصوصية المستخدم.
 
 ### Decision 2
+**Decision:**
+استهداف أصحاب المشاريع كأول مستخدم، وقبول أي نوع من البيانات.
 
-**Decision:**  
-...
+**Why:**
+حاجتهم هي الأكبر، وقبول أي بيانات يجعل التطبيق مفيدًا لأكثر من نشاط دون مجال ثابت.
 
-**Why:**  
-...
+### Decision 3
+**Decision:**
+دعم العربية والإنجليزية في الواجهة والنتائج.
+
+**Why:**
+المستخدم المستهدف قد يعمل بأي من اللغتين، ولا يجب أن تكون اللغة عائقًا أمام فهم بياناته.
 
 ---
 
 ## 🧪 Testing
 
-### Test 1
+### Test 1: CSV upload
+**Input:**
+رفع ملف CSV يحتوي بيانات عملية (مثل مبيعات منتجات مع التاريخ والسعر والكمية).
 
-**Input:**  
-...
+**Expected Result:**
+يُقرأ الملف، وتظهر لوحة بمؤشرات ورسوم مناسبة، ثم تظهر الـ Insights والـ Recommendations.
 
-**Expected Result:**  
-...
-
-**Actual Result:**  
-...
+**Actual Result:**
+[اكتبي ما ظهر فعلًا بعد رفع الملف]
 
 **Status:** ✅ / ❌
 
 ---
 
-### Test 2
+### Test 2: Language switching
+**Input:**
+تبديل لغة الواجهة بين العربية والإنجليزية بعد تحليل البيانات.
 
-**Input:**  
-...
+**Expected Result:**
+تتغير الواجهة واتجاه الصفحة (RTL / LTR) بشكل صحيح، وتظهر النتائج باللغة المختارة.
 
-**Expected Result:**  
-...
-
-**Actual Result:**  
-...
+**Actual Result:**
+[اكتبي ما ظهر فعلًا]
 
 **Status:** ✅ / ❌
 
@@ -166,43 +173,36 @@ What parts of the process are automated?
 
 ## 📸 Evidence
 
-### Final Result
+### Demo Video
 
-![Final Result](./screenshots/final-result.png)
+🎥 [Watch the Demo Video](https://drive.google.com/file/d/1bmqYGAZIpLortw2klJba2RoqJrzYLx7z/view?usp=sharing)
 
-### Workflow
-
-![Workflow](./screenshots/workflow.png)
+يعرض الفيديو التطبيق وهو يعمل: رفع الملف، ثم اللوحة، ثم الـ Insights والـ Recommendations، مع تبديل اللغة.
 
 ---
 
 ## ⚠️ Challenges & Failures
 
-What didn't work as expected?
+**What didn't work as expected?**
 
-- ...
-- ...
+- بعد أول Prompts كانت لوحة المؤشرات عامة وغير واضحة: مثلًا مجموع ومتوسط لكل سجل على عمود سعر دون معنى، ورسم Scatter غير مفيد.
 
-How did I solve it?
+**How did I solve it?**
 
-- ...
-- ...
+- راجعت المخرجات بدل قبول أول نتيجة، وأعدت صياغة مواصفات لوحة المؤشرات لتكون المؤشرات والرسوم أكثر معنى ووضوحًا، ثم وجّهت Lovable للتحسين (Iteration).
 
 ---
 
 ## 📚 What I Learned
 
 ### Technical Lesson
-
-...
+كيف أبني تطبيقًا يقرأ ملفات CSV/Excel داخل المتصفح ويحوّلها إلى مؤشرات ورسوم، وكيف أدعم اللغتين مع RTL.
 
 ### Problem-Solving Lesson
-
-...
+أول نتيجة من أداة البناء نادرًا ما تكون النهائية. المراجعة وتحديد الفجوة بين المطلوب والمنفّذ ثم التحسين هي ما رفع جودة اللوحة.
 
 ### AI Lesson
-
-...
+الذكاء الاصطناعي يحتاج إلى مواصفات واضحة ليعطي نتائج ذات معنى. مؤشرات "عامة" تنتج عندما تكون التعليمات عامة.
 
 ---
 
@@ -210,24 +210,24 @@ How did I solve it?
 
 If I continued developing this project, I would:
 
-- ...
-- ...
-- ...
+- إضافة قوالب جاهزة لقطاعات محددة (مثل التعليم أو الصحة أو الزراعة) فوق محرك التحليل العام.
+- إضافة تسجيل دخول وحفظ التحليلات السابقة للمقارنة عبر الزمن.
+- إتاحة تصدير التقرير (PDF) للمشاركة مع الفريق.
 
 ---
 
 ## 🔗 Project Links
 
-**Live Demo:** [Link]
+**Live Demo:** [pixel-perfect-dream-3901.lovable.app](https://pixel-perfect-dream-3901.lovable.app/)
 
-**Workflow:** [Link]
+**Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/1bmqYGAZIpLortw2klJba2RoqJrzYLx7z/view?usp=sharing)
 
-**Repository:** [Link]
+**Repository:** [github.com/lilian2005-ui/datasense-lite](https://github.com/lilian2005-ui/datasense-lite)
 
 ---
 
 ## 👩‍💻 Author
 
-**[Your Name]**
+**Lilian Abu Ramadan**
 
-[LinkedIn] · [GitHub]
+[LinkedIn](https://linkedin.com/in/lilian-abu-ramadan) · [GitHub](https://github.com/lilian2005-ui)
