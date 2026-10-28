@@ -2,7 +2,7 @@
 
 ## Process & Data Thinking
 
-> Before automating the work, understand the work.
+> **Before automating the work, understand the work.**
 
 في هذه الوحدة، أتعلم كيف أحوّل مشكلة واقعية إلى عملية واضحة يمكن تحليلها وتصميم حل مناسب لها باستخدام AI Automation.
 
@@ -35,15 +35,19 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** AI Client Intake & Request Routing System
 
 مشروع عملي أطبّق فيه مفاهيم تحليل العمل وتصميم عملية أتمتة تعتمد على AI.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+**Problem:** شركة خدمات تستقبل طلبات عملاء بصيغ مختلفة؛ بعضها مفصّل وبعضها قصير وبعضها ينقصه معلومات مهمة. معالجة هذه الطلبات يدويًا تستهلك وقت الموظفين وقد تؤدي إلى تأخر المتابعة أو فقدان بعض التفاصيل.
 
-[Explore the Project](./course-project/)
+**Solution:** نظام أتمتة يستقبل الطلب عبر Google Forms، ويستخرج منه المعلومات المهمة باستخدام AI by Zapier، ثم يوجّه الطلب عبر Paths حسب اكتمال المعلومات ووضوحها، ويسجل النتيجة في Google Sheets، ويرسل إشعارًا عبر Gmail، مع إبقاء الحالات غير المكتملة أو غير الواضحة تحت المراجعة البشرية.
+
+**Tools:** Google Forms · AI by Zapier · Zapier Paths · Google Sheets · Gmail
+
+[Explore the Project](./Course-Project)
+
+---
 
 ### 02 — Independent Project
 
@@ -51,11 +55,13 @@
 
 مشروع مستقل أطبّق فيه ما تعلمته على مشكلة مختلفة، مع تصميم الحل وتنفيذه وتوثيق النتائج.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+**Problem:** [المشكلة التي يعالجها المشروع]
 
-[Explore the Project](./independent-project/)
+**Solution:** [وصف مختصر للحل]
+
+**Tools:** [الأدوات المستخدمة]
+
+[Explore the Project](./Independent-Project)
 
 ---
 
@@ -63,18 +69,18 @@
 
 في هذه الوحدة، أركز على الأسئلة التالية:
 
-1. ما المشكلة الحقيقية التي نريد حلها؟
-2. كيف تتم العملية حاليًا؟
-3. ما المدخلات والبيانات التي يحتاجها النظام؟
-4. أين نحتاج إلى AI، وأين تكفي القواعد المحددة؟
-5. ماذا يحدث عندما تكون المعلومات ناقصة أو غير واضحة؟
-6. كيف نحوّل التصميم إلى Automation Workflow؟
+- ما المشكلة الحقيقية التي نريد حلها؟
+- كيف تتم العملية حاليًا؟
+- ما المدخلات والبيانات التي يحتاجها النظام؟
+- أين نحتاج إلى AI، وأين تكفي القواعد المحددة؟
+- ماذا يحدث عندما تكون المعلومات ناقصة أو غير واضحة؟
+- كيف نحوّل التصميم إلى Automation Workflow؟
 
 ---
 
 ## 📌 Key Takeaway
 
-**A good automation starts with a well-understood process, not with a tool.**
+> **A good automation starts with a well-understood process, not with a tool.**
 
 نجاح الأتمتة يبدأ بفهم العمل وتصميم العملية، وليس بمجرد اختيار الأداة.
 
@@ -82,20 +88,18 @@
 
 ## 📈 Capability Progress
 
-- [ ] فهم المشكلة والنتيجة المطلوبة.
-- [ ] تفكيك العمل إلى خطوات واضحة.
-- [ ] تحديد المدخلات والمخرجات.
-- [ ] تصميم قرارات AI وRule-Based Logic.
-- [ ] تحديد الحالات التي تحتاج إلى Human Review.
+- [x] فهم المشكلة والنتيجة المطلوبة.
+- [x] تفكيك العمل إلى خطوات واضحة.
+- [x] تحديد المدخلات والمخرجات.
+- [x] تصميم قرارات AI وRule-Based Logic.
+- [x] تحديد الحالات التي تحتاج إلى Human Review.
 - [ ] تنفيذ الحل وتوثيق نتائجه.
 
 ---
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
-
----
+- [Guided Project](./Course-Project)
+- [Independent Project](./Independent-Project)
 
 **Next:** U2 — BUILD THE SYSTEM
