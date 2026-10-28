@@ -23,10 +23,11 @@
 
 **What does the system do?**
 
-1. يستقبل ملف CSV أو Excel يرفعه المستخدم.
-2. يقرأ الملف داخل المتصفح (Browser) حفاظًا على خصوصية البيانات.
-3. يعرض لوحة بأهم الأرقام (KPIs) والرسوم البيانية.
-4. يولّد Insights وRecommendations مبنية على البيانات، ويدعم العربية والإنجليزية.
+1. يستقبل ملف CSV أو Excel (حتى 5 MB و50,000 صف و50 عمودًا).
+2. يقرأ الملف داخل المتصفح (Browser) ويعرض صفحة Data Check: ملخص الملف، وجودة البيانات (القيم المفقودة والصفوف المكررة)، ونوع كل عمود، ومعاينة للصفوف، مع اختيار المقياس الرئيسي (Main Measure) وعمود التاريخ.
+3. يعرض لوحة Dashboard بمؤشرات (KPIs) ورسوم: اتجاه عبر الزمن، وأعلى الفئات، وتوزيع القيم.
+4. يولّد AI Insights تتضمن Summary وKey Findings (مع الأهمية والدليل) وRisks & Anomalies وRecommendations (مع الأولوية) وData Limitations.
+5. يدعم العربية والإنجليزية.
 
 ---
 
@@ -60,13 +61,13 @@ User uploads a CSV / Excel file
               ↓
 File is read inside the browser
               ↓
-Data is parsed and analyzed
+Data Check: column types, data quality, Main Measure, Date Column
               ↓
 Dashboard: KPIs + Charts
               ↓
-AI generates Insights + Recommendations
+Statistical summary only (never raw rows) is sent to the AI
               ↓
-User reviews results (Arabic / English)
+AI Insights: Summary · Key Findings · Risks · Recommendations · Limitations
 ```
 
 ---
@@ -75,13 +76,15 @@ User reviews results (Arabic / English)
 
 **What does AI do in this solution?**
 
-- يقرأ ملخص البيانات المحللة ويستخرج منها Insights مفهومة.
-- يولّد Recommendations عملية مرتبطة ببيانات المستخدم.
-- يكتب النتائج بلغة بسيطة بالعربية أو الإنجليزية.
+- يقرأ الملخص الإحصائي للبيانات ويستخرج منه Key Findings مع الدليل (Evidence) لكل نتيجة.
+- يحدد المخاطر والشذوذات (Risks & Anomalies) مثل الصفوف المكررة والقيم المفقودة.
+- يولّد Recommendations عملية مرتبة حسب الأولوية ومربوطة بالبيانات التي بُنيت عليها.
+- يذكر حدود التحليل (Data Limitations).
 
 ### What AI Should NOT Do
 
-- اختراع أرقام أو استنتاجات غير مدعومة بالبيانات المرفوعة.
+- اختراع أرقام أو استنتاجات غير مدعومة بالبيانات المرفوعة؛ كل نتيجة تُعرض مع الدليل الذي بُنيت عليه.
+- الوصول إلى الصفوف الأصلية؛ يستلم ملخصًا إحصائيًا فقط.
 - تقديم التوصيات كقرارات نهائية؛ هي اقتراحات يراجعها صاحب المشروع.
 
 ---
@@ -99,10 +102,10 @@ User reviews results (Arabic / English)
 ## 🗂️ Data
 
 ### Input
-ملف CSV أو Excel يرفعه المستخدم، ويمكن أن يحتوي أي نوع من البيانات.
+ملف CSV أو Excel يرفعه المستخدم (حتى 5 MB و50,000 صف و50 عمودًا)، ويمكن أن يحتوي أي نوع من البيانات.
 
 ### Output
-لوحة بمؤشرات ورسوم بيانية، مع Insights وRecommendations بالعربية أو الإنجليزية.
+صفحة Data Check، ولوحة بمؤشرات ورسوم بيانية، وAI Insights تتضمن Summary وKey Findings وRisks وRecommendations وLimitations، بالعربية أو الإنجليزية.
 
 ---
 
@@ -139,21 +142,28 @@ User reviews results (Arabic / English)
 **Why:**
 المستخدم المستهدف قد يعمل بأي من اللغتين، ولا يجب أن تكون اللغة عائقًا أمام فهم بياناته.
 
+### Decision 4
+**Decision:**
+إضافة خطوة Data Check قبل الـ Dashboard، وإرسال ملخص إحصائي فقط إلى الـ AI، مع استبعاد الأعمدة النصية والمعرّفات.
+
+**Why:**
+يتأكد المستخدم من فهم التطبيق لبياناته (أنواع الأعمدة والجودة) قبل التحليل، وتبقى بياناته الأصلية في متصفحه.
+
 ---
 
 ## 🧪 Testing
 
 ### Test 1: CSV upload
 **Input:**
-رفع ملف CSV يحتوي بيانات عملية (مثل مبيعات منتجات مع التاريخ والسعر والكمية).
+رفع ملف `udemy.csv` (3,682 صفًا و11 عمودًا) من صفحة Upload.
 
 **Expected Result:**
-يُقرأ الملف، وتظهر لوحة بمؤشرات ورسوم مناسبة، ثم تظهر الـ Insights والـ Recommendations.
+يُقرأ الملف، وتظهر صفحة Data Check بأنواع الأعمدة وجودة البيانات، ثم Dashboard بمؤشرات ورسوم، ثم AI Insights.
 
 **Actual Result:**
-[اكتبي ما ظهر فعلًا بعد رفع الملف]
+قُرئ الملف وعرضت Data Check ملخص الملف (3,682 صفًا و11 عمودًا) وجودة البيانات (6 صفوف مكررة) وأنواع الأعمدة ومعاينة الصفوف. بعد اختيار المقياس الرئيسي (`price`) وعمود التاريخ بُنيت اللوحة بمؤشرات واتجاه عبر الزمن وأعلى الفئات وتوزيع القيم، ثم ظهرت AI Insights بالأقسام المتوقعة مع الدليل والأولوية.
 
-**Status:** ✅ / ❌
+**Status:** ✅
 
 ---
 
@@ -165,9 +175,9 @@ User reviews results (Arabic / English)
 تتغير الواجهة واتجاه الصفحة (RTL / LTR) بشكل صحيح، وتظهر النتائج باللغة المختارة.
 
 **Actual Result:**
-[اكتبي ما ظهر فعلًا]
+تبدّلت الواجهة بين العربية والإنجليزية بشكل صحيح، وتغيّر اتجاه الصفحة (RTL / LTR) وظهرت النتائج باللغة المختارة.
 
-**Status:** ✅ / ❌
+**Status:** ✅
 
 ---
 
@@ -218,7 +228,7 @@ If I continued developing this project, I would:
 
 ## 🔗 Project Links
 
-**Live Demo:** [pixel-perfect-dream-3901.lovable.app](https://pixel-perfect-dream-3901.lovable.app/)
+**Live Demo:** [datasense-lite.lovable.app](https://datasense-lite.lovable.app/)
 
 **Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/1bmqYGAZIpLortw2klJba2RoqJrzYLx7z/view?usp=sharing)
 
