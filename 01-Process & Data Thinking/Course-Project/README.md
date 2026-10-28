@@ -179,10 +179,10 @@ Paths: split by validity of the request
 ## 📸 Evidence
 
 ### Workflow
-![Workflow](./Screenshots/Workflow.png)
+🔗 [View Workflow Screenshot](./Screenshots/Workflow.png)
 
 ### Final Result
-![Final Result](./Screenshots/Final%20Result.jpg)
+🔗 [View Final Result Screenshot](./Screenshots/Final%20Result.jpg)
 
 ---
 
