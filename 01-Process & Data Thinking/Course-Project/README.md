@@ -1,60 +1,58 @@
 # AI Client Intake & Request Routing System
 
-An automation that turns unstructured client requests into organized, routed records, and sends anything incomplete or unclear to human review.
+نظام أتمتة يحوّل طلبات العملاء غير المنظمة إلى سجلات منظمة وموجّهة، ويحيل أي طلب ناقص أو غير واضح إلى المراجعة البشرية (Human Review).
 
 ---
 
 ## 🎯 Problem
 
 ### The Context
-A services company (web design, digital marketing, app development) receives requests from potential clients through online forms. Every client writes differently: some explain their needs in detail, some send a one-line message, and some forget to include important information.
+شركة خدمات تقدم حلولًا مثل تصميم المواقع والتسويق الرقمي وتطوير التطبيقات، وتستقبل طلبات من عملاء محتملين عبر نماذج إلكترونية. كل عميل يكتب طلبه بطريقته؛ بعضهم يشرح احتياجه بالتفصيل، وبعضهم يرسل رسالة قصيرة، وبعضهم ينسى معلومات مهمة.
 
 ### The Problem
-Each incoming request has to be read by an employee, who then has to understand the need, organize the details, check whether the information is clear and complete, and decide on the next step. As volume grows, this manual handling slows follow-up and details get lost.
+كل طلب يحتاج إلى موظف يقرأه ويفهم الاحتياج وينظّم التفاصيل ويتحقق من وضوح المعلومات واكتمالها، ثم يحدد الخطوة التالية. ومع زيادة عدد الطلبات يتأخر التواصل مع العملاء وتضيع بعض التفاصيل.
 
 ### Why It Matters
-This is not only a message-receiving problem. It is a problem of how requests are processed, organized, and routed. Reducing the repetitive work frees the team's time and makes sure no request is forgotten or mishandled.
+المشكلة ليست في استقبال الرسائل فقط، بل في طريقة معالجة الطلبات وتنظيمها وتوجيهها. تقليل هذا العمل المتكرر يوفّر وقت الفريق، ويضمن ألا يُنسى أي طلب أو يُعالج بشكل خاطئ.
 
 ---
 
 ## 💡 Solution
 
-An automation workflow that receives each request, uses AI to extract the key details, checks whether the information is sufficient, routes the request by clear rules, logs the result, and notifies the team. Incomplete or unclear requests are kept under human review instead of being processed blindly.
+سير عمل آلي (Automation Workflow) يستقبل كل طلب، ويستخدم الذكاء الاصطناعي لاستخراج التفاصيل المهمة، ويتحقق من كفاية المعلومات، ثم يوجّه الطلب وفق قواعد واضحة، ويسجل النتيجة ويُشعر الفريق. أما الطلبات الناقصة أو غير الواضحة فتبقى للمراجعة البشرية بدل معالجتها بشكل أعمى.
 
-### What does the system do?
+**What does the system do?**
 
-- Receives client requests through a Google Form.
-- Extracts and organizes the important information from each request.
-- Decides whether the information is sufficient to follow up.
-- Routes the request through a valid path or a fallback path based on defined rules.
-- Records the processing result in Google Sheets.
-- Sends the appropriate email notification.
+- يستقبل طلبات العملاء عبر Google Form.
+- يستخرج المعلومات المهمة وينظّمها.
+- يحدد إن كانت المعلومات كافية لمتابعة الطلب.
+- يوجّه الطلب إلى Valid Path أو Fallback Path.
+- يسجل النتيجة في Google Sheets.
+- يرسل الإشعار المناسب عبر Gmail.
 
 ---
 
 ## 👤 Users
 
 **Primary Users:**
-The company's team members who handle incoming client requests.
+أعضاء فريق الشركة الذين يتعاملون مع طلبات العملاء الواردة.
 
 **User Need:**
-Get requests that are already organized and classified, and know immediately which ones can be followed up and which need a human decision.
+الحصول على طلبات منظمة ومصنّفة مسبقًا، ومعرفة فورًا أيها يمكن متابعته وأيها يحتاج إلى قرار بشري.
 
 ---
 
 ## 🧠 How I Designed the Solution
 
-I did not start with the tool. I started by understanding the work: how a request is handled today, then breaking it into steps, defining the data each step needs, and designing the decisions the system must make, including what happens when information is missing. Only after that did I design the automation flow and implement it in Zapier.
-
-The analysis is documented step by step in the project files:
+لم أبدأ بالأداة، بل بفهم العمل أولًا: كيف يُعالج الطلب اليوم، ثم تفكيكه إلى خطوات، وتحديد البيانات المطلوبة لكل خطوة، وتصميم القرارات التي يجب على النظام اتخاذها، بما فيها حالة نقص المعلومات. وبعد ذلك فقط صممت تدفق الأتمتة ونفذته في Zapier.
 
 | File | Purpose |
 |---|---|
-| `01-business-analysis.md` | Understanding the business, the current problem, and the desired outcome |
-| `02-workflow-decomposition.md` | Breaking the work into connected steps and tasks |
-| `03-data-design.md` | Defining the required data and how it is organized |
-| `04-decision-and-exception-design.md` | Decision rules and handling of cases that need review |
-| `05-automation-design.md` | Designing the automation flow from the analysis |
+| `01-business-analysis.md` | فهم العمل والمشكلة الحالية والنتيجة المطلوبة |
+| `02-workflow-decomposition.md` | تقسيم العمل إلى خطوات ومهام مترابطة |
+| `03-data-design.md` | تحديد البيانات المطلوبة وكيفية تنظيمها |
+| `04-decision-and-exception-design.md` | قواعد القرار والتعامل مع الحالات التي تحتاج إلى مراجعة |
+| `05-automation-design.md` | تصميم تدفق الأتمتة بناءً على التحليل السابق |
 
 ---
 
@@ -80,14 +78,14 @@ Paths: split by validity of the request
 
 **What does AI do in this solution?**
 
-- Reads the free-text request and extracts the important details.
-- Organizes the extracted information into structured fields.
-- Supports the check of whether the request is clear and complete.
+- يقرأ الطلب النصي الحر ويستخرج التفاصيل المهمة.
+- ينظّم المعلومات المستخرجة في حقول منظمة (Structured Fields).
+- يدعم التحقق من وضوح الطلب واكتماله.
 
 **What AI Should NOT Do**
 
-- Make the final decision on unclear or incomplete requests; those are held for human review.
-- Replace the defined routing rules; the routing follows explicit conditions.
+- اتخاذ القرار النهائي في الطلبات غير الواضحة أو الناقصة؛ هذه تذهب إلى Human Review.
+- استبدال قواعد التوجيه المحددة؛ التوجيه يعتمد على شروط صريحة.
 
 ---
 
@@ -95,21 +93,21 @@ Paths: split by validity of the request
 
 **What parts of the process are automated?**
 
-- Receiving the request when the form is submitted.
-- Extracting and structuring the request details.
-- Routing the request to the correct path.
-- Logging the outcome in Google Sheets.
-- Sending the notification email.
+- استقبال الطلب عند إرسال النموذج.
+- استخراج التفاصيل وتنظيمها.
+- توجيه الطلب إلى المسار الصحيح.
+- تسجيل النتيجة في Google Sheets.
+- إرسال بريد الإشعار.
 
 ---
 
 ## 🗂️ Data
 
 **Input**
-The client's request as submitted through the Google Form, in free text and with varying levels of detail.
+طلب العميل من Google Form بنص حر وبمستويات تفصيل متفاوتة.
 
 **Output**
-A structured record in Google Sheets with the extracted request details and the processing result, plus a notification email.
+سجل منظم في Google Sheets يحتوي على التفاصيل المستخرجة ونتيجة المعالجة، مع بريد إشعار عبر Gmail.
 
 ---
 
@@ -117,11 +115,11 @@ A structured record in Google Sheets with the extracted request details and the 
 
 | Tool | Purpose |
 |---|---|
-| Google Forms | Receive client requests |
-| AI by Zapier | Extract and organize the request details |
-| Zapier (Paths) | Build the automation and route requests by conditions |
-| Google Sheets | Record requests and processing results |
-| Gmail | Send notifications |
+| Google Forms | استقبال طلبات العملاء |
+| AI by Zapier | استخراج تفاصيل الطلب وتنظيمها |
+| Zapier (Paths) | بناء الأتمتة والتوجيه حسب الشروط |
+| Google Sheets | تسجيل الطلبات ونتائج معالجتها |
+| Gmail | إرسال الإشعارات |
 
 ---
 
@@ -129,24 +127,24 @@ A structured record in Google Sheets with the extracted request details and the 
 
 ### Decision 1
 **Decision:**
-Design the process (analysis, workflow, data, decisions) before building any automation.
+تصميم العملية (التحليل، Workflow، البيانات، القرارات) قبل بناء أي أتمتة.
 
 **Why:**
-Automation built on a poorly understood process only automates confusion. Understanding the work first makes the tool choices and the rules clear.
+الأتمتة المبنية على عملية غير مفهومة تؤتمت الفوضى فقط.
 
 ### Decision 2
 **Decision:**
-Route requests into a valid path and a fallback path, and keep unclear or incomplete requests under human review.
+توجيه الطلبات إلى Valid Path وFallback Path، وإبقاء الطلبات غير الواضحة أو الناقصة تحت Human Review.
 
 **Why:**
-Client requests are inconsistent. Instead of letting AI act on unreliable input, the system separates cases it can handle from cases that need a person.
+طلبات العملاء غير متسقة، فيفصل النظام ما يمكنه معالجته عمّا يحتاج إلى شخص بدل التصرف بناءً على مدخلات غير موثوقة.
 
 ### Decision 3
 **Decision:**
-Log every request and its outcome in Google Sheets, on both paths.
+تسجيل كل طلب ونتيجته في Google Sheets في كلا المسارين.
 
 **Why:**
-A single record of everything that was processed means no request is lost and the team can see what happened to each one.
+سجل واحد لكل ما عولج يضمن عدم ضياع أي طلب، ويتيح للفريق معرفة ما حدث لكل طلب.
 
 ---
 
@@ -154,34 +152,34 @@ A single record of everything that was processed means no request is lost and th
 
 ### Test 1: Clear and complete request
 **Input:**
-[Describe the test request you submitted]
+طلب يحتوي على اسم العميل وبريده والخدمة المطلوبة (مثل موقع لمشروع صغير) ووصف واضح وموعد مطلوب.
 
 **Expected Result:**
-The request goes through the valid path, a row is recorded in Google Sheets, and the notification email is sent.
+يستخرج AI by Zapier جميع الحقول، ويمر الطلب بالـ Valid Path، ويُضاف صف في Google Sheets، ويُرسل بريد الإشعار.
 
 **Actual Result:**
-[What actually happened]
+مرّ الطلب بالـ Valid Path وسُجّل الصف وأُرسل البريد كما هو متوقع.
 
-**Status:** ✅ / ❌
+**Status:** ✅
 
 ### Test 2: Incomplete or unclear request
 **Input:**
-[Describe the test request you submitted]
+طلب قصير مثل "أحتاج مساعدة في التسويق" دون ميزانية أو موعد أو تفاصيل الخدمة.
 
 **Expected Result:**
-The request goes through the fallback path, is recorded for review, and the matching email is sent.
+يمر الطلب بالـ Fallback Path، ويُسجل في Google Sheets على أنه يحتاج مراجعة، ويُرسل البريد المناسب ليتابعه أحد أعضاء الفريق.
 
 **Actual Result:**
-[What actually happened]
+مرّ الطلب بالـ Fallback Path وسُجّل للمراجعة وأُرسل البريد المناسب.
 
-**Status:** ✅ / ❌
+**Status:** ✅
 
 ---
 
 ## 📸 Evidence
 
 ### Workflow
-![Workflow](./Screenshots/workflow.png)
+![workflow](./Screenshots/workflow.png)
 
 ### Final Result
 ![Final Result](./Screenshots/final-result.png)
@@ -192,26 +190,28 @@ The request goes through the fallback path, is recorded for review, and the matc
 
 **What didn't work as expected?**
 
-- The Zap uses paid features (Paths and others). After the Zapier trial ended, the Zap was disabled, so the workflow can no longer run live.
-- [Add any other issue you ran into while building or testing]
+- يستخدم الـ Zap ميزات مدفوعة (مثل Paths)، وبعد انتهاء فترة التجربة تعطّل ولم يعد يعمل مباشرة.
+- طلبات النص الحر متباينة جدًا، فقد يفوّت الاستخراج بعض الحقول أو يسيء فهمها عندما تكون الرسالة قصيرة أو غامضة.
+- تحديد ما يُعد "Valid" وما يُعد "Fallback" تطلّب تعريف شروط واضحة أولًا.
 
 **How did I solve it?**
 
-- I documented the workflow with screenshots and the design files so the work can still be reviewed without a live link.
-- [Add how you solved the other issues]
+- وثّقت الـ Workflow بصور وملفات التصميم ليمكن مراجعة العمل بدون رابط مباشر.
+- أبقيت الطلبات غير الواضحة على Fallback Path مع Human Review بدل ترك القرار للذكاء الاصطناعي.
+- عرّفت شروط التوجيه في ملف تصميم القرارات قبل بناء الـ Paths.
 
 ---
 
 ## 📚 What I Learned
 
 ### Technical Lesson
-[What you learned about building the workflow in Zapier, for example Paths and AI extraction]
+كيفية بناء Workflow متعدد الخطوات في Zapier: Trigger من Google Forms، واستخراج منظم بـ AI by Zapier، وتفرّع بـ Paths، وكتابة النتائج في Google Sheets وGmail.
 
 ### Problem-Solving Lesson
-A good automation starts with a well-understood process, not with a tool. Analyzing the work first made the design much clearer.
+الأتمتة الجيدة تبدأ بعملية مفهومة جيدًا وليس بأداة. تحليل العمل أولًا جعل كل قرار لاحق أوضح.
 
 ### AI Lesson
-[What you learned about where AI helps and where explicit rules or human review are the better choice]
+الذكاء الاصطناعي قوي في تحويل النص غير المنظم إلى بيانات منظمة، لكن القرارات في الحالات غير الواضحة أكثر أمانًا مع قواعد صريحة ومراجعة بشرية.
 
 ---
 
@@ -219,17 +219,17 @@ A good automation starts with a well-understood process, not with a tool. Analyz
 
 If I continued developing this project, I would:
 
-- [Improvement 1]
-- [Improvement 2]
-- [Improvement 3]
+- إضافة بريد متابعة تلقائي يطلب من العميل المعلومات الناقصة في الـ Fallback Path.
+- إضافة حقل Priority ليرى الفريق الطلبات الأكثر إلحاحًا أولًا.
+- إعادة بناء التدفق على أداة مجانية أو مستضافة ذاتيًا مثل n8n ليبقى يعمل دون ميزات مدفوعة.
 
 ---
 
 ## 🔗 Project Links
 
-**Live Demo:** Not available (the Zap relies on paid features and is disabled after the trial). See the screenshots in the Evidence section.
+**Live Demo:** غير متاح (الـ Zap يعتمد على ميزات مدفوعة وتعطل بعد التجربة). راجع قسم Evidence.
 
-**Workflow:** See `./Screenshots`
+**Workflow:** `./Screenshots`
 
 **Repository:** [github.com/lilian2005-ui/Lilian_aiAutomation](https://github.com/lilian2005-ui/Lilian_aiAutomation)
 
