@@ -22,13 +22,13 @@
 
 ## 🧠 What I Learned
 
-- **Testing Strategy:** تحديد ما الذي يجب اختباره.
-- **Test Cases:** تصميم حالات اختبار تمثل استخدامات مختلفة.
-- **Expected vs. Actual Results:** مقارنة النتائج المتوقعة بالنتائج الفعلية.
-- **Edge Cases:** اختبار الحالات غير المعتادة أو التي تقع عند حدود السلوك المتوقع.
-- **Failure Analysis:** تحليل أسباب الإخفاق.
-- **Iteration:** تحسين الحل بناءً على نتائج الاختبارات.
-- **Evidence-Based Evaluation:** توثيق الأدلة التي تدعم تقييم النظام.
+- **Testing Strategy:** تحديد ما الذي يجب اختباره: البيانات، والصلاحيات، والوظائف الأساسية، ومخرجات الذكاء الاصطناعي.
+- **Test Cases:** تصميم حالات اختبار تمثل استخدامات مختلفة، صحيحة (Positive) وغير صحيحة (Negative).
+- **Expected vs. Actual Results:** مقارنة النتائج المتوقعة بالنتائج الفعلية، وتسجيل الاختلاف بدل افتراض أن الوظيفة تعمل.
+- **Edge Cases:** اختبار الحالات غير المعتادة أو التي تقع عند حدود السلوك المتوقع، مثل خطة بلا مهام أو رابط تأكيد منتهي الصلاحية.
+- **Failure Analysis:** تحليل أسباب الإخفاق والوصول إلى السبب الجذري (Root Cause).
+- **Iteration:** تحسين الحل بناءً على نتائج الاختبارات ثم إعادة الاختبار.
+- **Evidence-Based Evaluation:** توثيق الأدلة (Screenshots وتقارير أدوات الفحص وسياسات قاعدة البيانات) التي تدعم تقييم النظام.
 
 ---
 
@@ -36,27 +36,29 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** TaskBridge — Work Planning Web Application
 
 أختبر حلًا عمليًا باستخدام حالات اختبار محددة، وأوثق النتائج وأحدد جوانب التحسين.
 
-- **System Under Test:** [النظام الذي يجري اختباره]
-- **Testing Focus:** [ما الذي أختبره]
-- **Tools:** [الأدوات المستخدمة]
+- **System Under Test:** تطبيق ويب لتحويل طلبات العمل غير الواضحة إلى خطط ومهام، مبني بـ Lovable وSupabase.
+- **Testing Focus:** إدارة الخطط والمهام (CRUD)، وحساب نسبة الإنجاز، وحفظ البيانات، وعزل بيانات المستخدمين عبر RLS، والمصادقة.
+- **Tools:** Recus · Supabase Dashboard · Manual Testing
+- **Result:** نجحت الاختبارات الأساسية، ونجح 71 من 82 فحصًا آليًا في Recus، ووُثّقت 4 مشكلات مع أسبابها وخطورتها.
 
-[Explore the Project](./course-project/)
+[Explore the Project](./Course-Project/)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** ContentFlow AI — AI-Powered Social Content Generation
 
 أطبق منهجية الاختبار على حل مستقل، وأوثق حالات النجاح والفشل والتحسينات التي أجريتها.
 
-- **System Under Test:** [النظام]
-- **Testing Focus:** [محور الاختبار]
-- **Tools:** [الأدوات المستخدمة]
+- **System Under Test:** منصة لتوليد محتوى التواصل الاجتماعي من هوية العلامة، مبنية بـ v0 وNext.js وSupabase وGoogle Gemini.
+- **Testing Focus:** إنشاء الحساب وتأكيد البريد، وإنشاء العلامة واستخراج ألوانها من الشعار، وتوليد المحتوى.
+- **Tools:** Manual Testing · Supabase Auth
+- **Result:** نجح التسجيل والدخول، ونجح استخراج الألوان جزئيًا، ولم يكتمل توليد المحتوى في النسخة الحالية؛ والمشكلات موثقة وقيد الإصلاح.
 
-[Explore the Project](./independent-project/)
+[Explore the Project](./Independent-Project/)
 
 ---
 
@@ -81,20 +83,20 @@
 
 ## 📈 Capability Progress
 
-- [ ] تحديد نطاق الاختبار.
-- [ ] إعداد Test Cases.
-- [ ] تحديد Expected Results.
-- [ ] توثيق Actual Results.
-- [ ] اختبار الحالات غير المعتادة.
-- [ ] تحليل الأخطاء.
+- [x] تحديد نطاق الاختبار.
+- [x] إعداد Test Cases.
+- [x] تحديد Expected Results.
+- [x] توثيق Actual Results.
+- [x] اختبار الحالات غير المعتادة.
+- [x] تحليل الأخطاء.
 - [ ] توثيق التحسينات ونتائج إعادة الاختبار.
 
 ---
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
+- [Guided Project](./Course-Project/)
+- [Independent Project](./Independent-Project/)
 
 ---
 
