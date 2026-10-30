@@ -181,7 +181,7 @@ Session ID ثابت لكل محادثة في Simple Memory.
 يحتفظ الـ Agent بالمعلومات السابقة ولا يكرر السؤال عنها، ويسأل عن الحقل الناقص التالي فقط، ويطلب التوضيح عند الإجابة غير الواضحة بدل التخمين.
 
 **Actual Result:**
-لخّص الـ Agent ما جمعه (Apartment, Buy, $200,000 to below $400,000) وسأل فقط عن New/Resale، وعند "release property" طلب تأكيد أن المقصود Resale قبل الانتقال إلى السؤال التالي ([Conversation 1](./Screenshots/Telegram-Conversation-1.png) · [Conversation 2](./Screenshots/Telegram-Conversation-2.png)).
+لخّص الـ Agent ما جمعه (Apartment, Buy, $200,000 to below $400,000) وسأل فقط عن New/Resale، وعند "release property" طلب تأكيد أن المقصود Resale قبل الانتقال إلى السؤال التالي ([Conversation 1](./Screenshoots/Telegram-Conversation-1.png) · [Conversation 2](./Screenshoots/Telegram-Conversation-2.png)).
 
 **Status:** ✅
 
@@ -195,7 +195,7 @@ Session ID ثابت لكل محادثة في Simple Memory.
 يعرض الـ Agent ملخصًا بالحقول التسعة ويطلب التأكيد، وبعد التأكيد يُضاف صف مطابق للملخص في الأعمدة المحددة.
 
 **Actual Result:**
-عرض الـ Agent الملخص بالحقول التسعة وطلب التأكيد ([Summary](./Screenshots/Summary-Confirmation.png))، وبعد التأكيد أُضيف الصف إلى الشيت ([Sheet Rows](./Screenshots/Sheet-Rows.png)). كشف التشغيل الأول أن قيمة Timeline لم تُحفظ لأن عنوان العمود E كان `First Ourcase` بدل `Timeline`، وأن الصفر حُذف من بداية رقم الهاتف. بعد تصحيح عنوان العمود وتنسيق عمود الهاتف كنص، أصبحت البيانات تُحفظ بشكل صحيح.
+عرض الـ Agent الملخص بالحقول التسعة وطلب التأكيد ([Summary](./Screenshoots/Summary-Confirmation.png))، وبعد التأكيد أُضيف الصف إلى الشيت ([Sheet Rows](./Screenshoots/Sheet-Rows.png)). كشف التشغيل الأول أن قيمة Timeline لم تُحفظ لأن عنوان العمود E كان `First Ourcase` بدل `Timeline`، وأن الصفر حُذف من بداية رقم الهاتف. بعد تصحيح عنوان العمود وتنسيق عمود الهاتف كنص، أصبحت البيانات تُحفظ بشكل صحيح.
 
 **Status:** ✅ (بعد الإصلاح)
 
@@ -209,7 +209,7 @@ Session ID ثابت لكل محادثة في Simple Memory.
 لا يسأل الـ Agent عن New/Resale وFirst Ourcase، ويحفظ قيمتهما `Not Applicable`.
 
 **Actual Result:**
-حُفظ صف الاستئجار والقيمة `Not Applicable` في New/Resale وFirst Ourcase ([Sheet Rows](./Screenshots/Sheet-Rows.png)).
+حُفظ صف الاستئجار والقيمة `Not Applicable` في New/Resale وFirst Ourcase ([Sheet Rows](./Screenshoots/Sheet-Rows.png)).
 
 **Status:** ✅
 
@@ -223,7 +223,7 @@ Session ID ثابت لكل محادثة في Simple Memory.
 يحدّث الـ Agent البيانات، ويعرض ملخصًا جديدًا فيه `Not Applicable` في New/Resale وFirst Ourcase، ويحفظ البيانات المحدثة بعد التأكيد.
 
 **Actual Result:**
-حدّث الـ Agent الطلب إلى Rent وحُفظت القيمة `Not Applicable` في الحقلين بشكل صحيح في الشيت ([Sheet Rows](./Screenshots/Sheet-Rows.png)). لكن الملخص الذي عرضه للعميل بعد التحديث ظل يذكر "Resale" و"نعم" في هذين الحقلين، رغم أن رسالته نفسها تقول إنهما أصبحا غير قابلين للتطبيق ([Correction](./Screenshots/Correction-Rent.png)).
+حدّث الـ Agent الطلب إلى Rent وحُفظت القيمة `Not Applicable` في الحقلين بشكل صحيح في الشيت ([Sheet Rows](./Screenshoots/Sheet-Rows.png)). لكن الملخص الذي عرضه للعميل بعد التحديث ظل يذكر "Resale" و"نعم" في هذين الحقلين، رغم أن رسالته نفسها تقول إنهما أصبحا غير قابلين للتطبيق ([Correction](./Screenshoots/Correction-Rent.png)).
 
 **Status:** ⚠️ Partially Passed
 
@@ -231,12 +231,12 @@ Session ID ثابت لكل محادثة في Simple Memory.
 
 ## 📸 Evidence
 
-- 🔗 [View n8n Workflow](./Screenshots/Workflow.png)
-- 🔗 [View Telegram Conversation (Part 1)](./Screenshots/Telegram-Conversation-1.png)
-- 🔗 [View Telegram Conversation (Part 2)](./Screenshots/Telegram-Conversation-2.png)
-- 🔗 [View Summary and Confirmation](./Screenshots/Summary-Confirmation.png)
-- 🔗 [View Correction from Buy to Rent](./Screenshots/Correction-Rent.png)
-- 🔗 [View Saved Rows in Google Sheets](./Screenshots/Sheet-Rows.png)
+- 🔗 [View n8n Workflow](./Screenshoots/Workflow.png)
+- 🔗 [View Telegram Conversation (Part 1)](./Screenshoots/Telegram-Conversation-1.png)
+- 🔗 [View Telegram Conversation (Part 2)](./Screenshoots/Telegram-Conversation-2.png)
+- 🔗 [View Summary and Confirmation](./Screenshoots/Summary-Confirmation.png)
+- 🔗 [View Correction from Buy to Rent](./Screenshoots/Correction-Rent.png)
+- 🔗 [View Saved Rows in Google Sheets](./Screenshoots/Sheet-Rows.png)
 
 ---
 
@@ -287,7 +287,7 @@ If I continued developing this project, I would:
 
 **Live Demo:** غير متاح (n8n Cloud بفترة تجريبية). راجع قسم Evidence.
 
-**Workflow:** [Workflow Screenshot](./Screenshots/Workflow.png)
+**Workflow:** [Workflow Screenshot](./Screenshoots/Workflow.png)
 
 **Repository:** [github.com/lilian2005-ui/Lilian_aiAutomation](https://github.com/lilian2005-ui/Lilian_aiAutomation)
 
