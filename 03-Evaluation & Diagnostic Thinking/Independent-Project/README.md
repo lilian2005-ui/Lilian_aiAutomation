@@ -155,7 +155,7 @@ Export: PDF · CSV · JSON
 تظهر رسالة تطلب تأكيد البريد، ويصل إيميل التأكيد من Supabase Auth، ثم يفتح Workspace المستخدم.
 
 **Actual Result:**
-ظهرت رسالة "Check your email to confirm your account" ([Register](./Screenshots/Register.png))، ووصل إيميل التأكيد ([Confirmation Email](./Screenshots/Confirmation-Email.png))، وفُتح الـ Workspace بعد الدخول ([Dashboard](./Screenshots/Dashboard.png)).
+ظهرت رسالة "Check your email to confirm your account" ([Register](./Screenshots/Register.png))، ووصل إيميل التأكيد ([Confirmation Email](./Screenshots/Confirmation-Email.png))، وفُتح الـ Workspace بعد الدخول ([Dashboard](./Screenshots/Dashboard%20%281%29.png)).
 
 **Status:** ✅
 
@@ -193,7 +193,7 @@ Export: PDF · CSV · JSON
 
 - 🔗 [View Register Page](./Screenshots/Register.png)
 - 🔗 [View Confirmation Email](./Screenshots/Confirmation-Email.png)
-- 🔗 [View Workspace Dashboard](./Screenshots/Dashboard.png)
+- 🔗 [View Workspace Dashboard](./Screenshots/Dashboard%20%281%29.png)
 - 🔗 [View Brand Profile and Extracted Colors](./Screenshots/Brand-Profile.png)
 - 🔗 [View Content Generation Screen](./Screenshots/Generating.png)
 
