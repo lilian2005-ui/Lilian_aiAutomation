@@ -134,13 +134,13 @@ Automates how a services company processes client requests: extracting key detai
 **Tools:**  
 Google Forms · AI by Zapier · Zapier Paths · Google Sheets · Gmail
 
-🔗 [View Project](./01-process-and-data/course-project)
+🔗 [View Project](./01-Process%20%26%20Data%20Thinking/Course-Project)
 
 #### 02 — [Independent Project Name]
 
 **Type:** Independent Project
 
-🔗 [View Project](./01-process-and-data/independent-project)
+🔗 [View Project](./01-Process%20%26%20Data%20Thinking/Independent-Project)
 
 ---
 
@@ -176,7 +176,7 @@ Lets business owners upload a CSV or Excel file and instantly get a clear dashbo
 **Tools:**  
 Lovable · AI-powered analysis
 
-🔗 [View Repository](https://github.com/lilian2005-ui/datasense-lite) · 🌐 [Live Demo]((https://datasense-lite.lovable.app/))
+🔗 [View Repository](https://github.com/lilian2005-ui/datasense-lite) · 🌐 [Live Demo](https://datasense-lite.lovable.app/)
 
 ---
 
@@ -245,13 +245,13 @@ I learned how AI systems can work with external knowledge and how to design solu
 
 **Type:** Guided Project
 
-🔗 [View Project](./04-ground-its-knowledge/course-project)
+🔗 [View Project](./04-Grounding%20Thinking/course-project)
 
 #### 02 — [Independent Project Name]
 
 **Type:** Independent Project
 
-🔗 [View Project](./04-ground-its-knowledge/independent-project)
+🔗 [View Project](./04-Grounding%20Thinking/Independent-Project)
 
 ---
 
@@ -275,7 +275,7 @@ Replaces manual client intake for a real estate company. An AI Agent chats with 
 **Tools:**  
 n8n · Telegram · OpenRouter · Simple Memory · Google Sheets
 
-🔗 [View Project](./05-control-its-agency/course-project)
+🔗 [View Project](./05-Agent%20%26%20Decision%20Thinking/Course-project)
 
 #### 02 — Recruiter Matching Agent
 
@@ -290,7 +290,7 @@ Borderline scores (60 to 74) go to the recruiter and incomplete profiles are fla
 **Tools:**  
 n8n · Telegram Bot API · OpenRouter (LLM) · Simple Memory · Himalayas Jobs API · Google Sheets
 
-🔗 [View Project](./05-control-its-agency/independent-project)
+🔗 [View Project](./05-Agent%20%26%20Decision%20Thinking/Independent-Project)
 
 ---
 
