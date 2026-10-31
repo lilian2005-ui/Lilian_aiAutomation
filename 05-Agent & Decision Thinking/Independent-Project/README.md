@@ -184,7 +184,7 @@ Telegram Send Message
 
 ## 📸 Evidence
 
-- 🔗 [View n8n Workflow](./Screenshots/Workflow.png)
+- 🔗 [View n8n Workflow](./Screenshots/Workflow(1).png)
 - 🔗 [View Chat ID Error](./Screenshots/Chat-ID-Error.png)
 
 ---
@@ -230,7 +230,7 @@ If I continued developing this project, I would:
 
 **Live Demo:** غير متاح (n8n Cloud بفترة تجريبية). راجع قسم Evidence.
 
-**Workflow:** [Workflow Screenshot](./Screenshots/Workflow.png)
+**Workflow:** [Workflow Screenshot](./Screenshots/Workflow(1).png)
 
 **Repository:** [github.com/lilian2005-ui/Lilian_aiAutomation](https://github.com/lilian2005-ui/Lilian_aiAutomation)
 
